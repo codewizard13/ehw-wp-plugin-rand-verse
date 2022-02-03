@@ -31,8 +31,8 @@ class EHW_Rand_Verse_Widget extends WP_Widget {
 		}
 
         // Widget Content Output
-		// echo esc_html__( 'Hello, World!', 'rbv_domain' );
-        echo '<h3>HELLO!</h3>';
+		include('ehw-randverse_tmpl__out.php');
+		echo $output;
 
 		echo $args['after_widget']; // Whatever you want to display AFTER widget (<div>, etc)
 	}
