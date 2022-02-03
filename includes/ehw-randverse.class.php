@@ -11,8 +11,8 @@ class Youtube_Subs_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'youtubesubs_widget', // Base ID
-			esc_html__( 'YouTube Subs', 'yts_domain' ), // Name
-			array( 'description' => esc_html__( 'Widget to display YouTube subs', 'yts_domain' ), ) // Args
+			esc_html__( 'YouTube Subs', 'rbv_domain' ), // Name
+			array( 'description' => esc_html__( 'Widget to display YouTube subs', 'rbv_domain' ), ) // Args
 		);
 	}
 
@@ -31,7 +31,7 @@ class Youtube_Subs_Widget extends WP_Widget {
 		}
 
         // Widget Content Output
-		// echo esc_html__( 'Hello, World!', 'yts_domain' );
+		// echo esc_html__( 'Hello, World!', 'rbv_domain' );
         echo '<div class="g-ytsubscribe" data-channelid='.$instance['channel'].' data-layout='.$instance['layout'].' data-count='.$instance['count'].'></div>';
 
 		echo $args['after_widget']; // Whatever you want to display AFTER widget (<div>, etc)
@@ -45,16 +45,16 @@ class Youtube_Subs_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'YouTube Subs', 'yts_domain' );
-		$channel = ! empty( $instance['channel'] ) ? $instance['channel'] : esc_html__( 'UCp93Jok5b2D4-LbIM4ZNNqA', 'yts_domain' );
-		$layout = ! empty( $instance['layout'] ) ? $instance['layout'] : esc_html__( 'default', 'yts_domain' );
-		$count = ! empty( $instance['count'] ) ? $instance['count'] : esc_html__( 'default', 'yts_domain' );		
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'YouTube Subs', 'rbv_domain' );
+		$channel = ! empty( $instance['channel'] ) ? $instance['channel'] : esc_html__( 'UCp93Jok5b2D4-LbIM4ZNNqA', 'rbv_domain' );
+		$layout = ! empty( $instance['layout'] ) ? $instance['layout'] : esc_html__( 'default', 'rbv_domain' );
+		$count = ! empty( $instance['count'] ) ? $instance['count'] : esc_html__( 'default', 'rbv_domain' );		
 		?>
 
         <!-- TITLE -->
 		<p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
-                <?php esc_attr_e( 'Title:', 'yts_domain' ); ?>
+                <?php esc_attr_e( 'Title:', 'rbv_domain' ); ?>
             </label> 
             <input 
                 class="widefat"
@@ -67,7 +67,7 @@ class Youtube_Subs_Widget extends WP_Widget {
         <!-- CHANNEL -->
 		<p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'channel' ) ); ?>">
-                <?php esc_attr_e( 'Channel:', 'yts_domain' ); ?>
+                <?php esc_attr_e( 'Channel:', 'rbv_domain' ); ?>
             </label> 
             <input 
                 class="widefat"
@@ -80,7 +80,7 @@ class Youtube_Subs_Widget extends WP_Widget {
 		<!-- LAYOUT -->
 		<p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'layout' ) ); ?>">
-                <?php esc_attr_e( 'Layout:', 'yts_domain' ); ?>
+                <?php esc_attr_e( 'Layout:', 'rbv_domain' ); ?>
             </label>
 
             <select 
@@ -102,7 +102,7 @@ class Youtube_Subs_Widget extends WP_Widget {
 		<!-- COUNT -->
 		<p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'count' ) ); ?>">
-                <?php esc_attr_e( 'Count:', 'yts_domain' ); ?>
+                <?php esc_attr_e( 'Count:', 'rbv_domain' ); ?>
             </label>
 
             <select 
