@@ -11,7 +11,7 @@ class EHW_Rand_Verse_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			$textdomain."_widget", // Base ID
-			esc_html__( 'EHW Random Bible Verse', 'rbv_domain' ), // Name
+			esc_html__( $p_name, 'rbv_domain' ), // Name
 			array( 'description' => esc_html__( 'Widget to display random Bible verse', 'rbv_domain' ), ) // Args
 		);
 	}
