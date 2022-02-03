@@ -1,4 +1,4 @@
-<?php /* youtubesubs-scripts.php */
+<?php /* ehw-randverse-scripts.php */
 
   // Add Scripts
   function rbv_add_scripts() {
