@@ -1,4 +1,8 @@
 <?php /* ehw-randverse-scripts.php */
 
-$output = "<h3>I'm in " . __FILE__ . "</h3>";
+$verse = 'For I know the thoughts that I think toward you,' . 
+         'saith the LORD, thoughts of peace, and not of evil,' . 
+         'to give you an expected end.';
+
+$output = $verse;
 
