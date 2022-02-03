@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Adds YouTube_Subs widget.
+ * Adds EHW_Rand_Verse widget.
  */
-class Youtube_Subs_Widget extends WP_Widget {
+class EHW_Rand_Verse_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
