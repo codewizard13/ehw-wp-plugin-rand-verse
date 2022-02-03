@@ -14,14 +14,14 @@ if (!defined('ABSPATH')) {
    exit;
 }
 
-$textdomain = 'ehw-rbv';
-$pluginname = 'ehw-randverse';
+$plug_abbr = 'ehw-rbv';
+$textdomain = 'ehw-randverse';
 
 // Load Scripts
-require_once(plugin_dir_path(__FILE__).'/includes/youtubesubs-scripts.php');
+require_once(plugin_dir_path(__FILE__)."/includes/$textdomain-scripts.php");
 
 // Load Class
-require_once(plugin_dir_path(__FILE__).'/includes/youtubesubs.class.php');
+require_once(plugin_dir_path(__FILE__)."/includes/$textdomain.class.php");
 
 // Register Widget
 function register_youtubesubs() {
