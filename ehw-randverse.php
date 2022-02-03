@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
    exit;
 }
 
-$plug_abbr = 'ehw-rbv';
+$abbr = 'rbv'; // abbreviation prefix
 $textdomain = 'ehw-randverse';
 
 // Load Scripts
