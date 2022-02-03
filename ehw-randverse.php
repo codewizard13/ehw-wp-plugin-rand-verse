@@ -24,11 +24,11 @@ require_once(plugin_dir_path(__FILE__)."/includes/$textdomain-scripts.php");
 require_once(plugin_dir_path(__FILE__)."/includes/$textdomain.class.php");
 
 // Register Widget
-function register_youtubesubs() {
-    register_widget('YouTube_Subs_Widget');
+function register_ehw_randverse() {
+    register_widget('EHW_Rand_Verse_Widget');
 }
 
 // Hook in function
-add_action ('widgets_init', 'register_youtubesubs');
+add_action ('widgets_init', 'register_ehw_randverse');
 
 /* FINAL VERSION -- WORKS PERFECT */
