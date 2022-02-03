@@ -32,7 +32,7 @@ class EHW_Rand_Verse_Widget extends WP_Widget {
 
         // Widget Content Output
 		// echo esc_html__( 'Hello, World!', 'rbv_domain' );
-        echo '<div class="g-ytsubscribe" data-channelid='.$instance['channel'].' data-layout='.$instance['layout'].' data-count='.$instance['count'].'></div>';
+        echo '<h3>HELLO!</h3>';
 
 		echo $args['after_widget']; // Whatever you want to display AFTER widget (<div>, etc)
 	}
