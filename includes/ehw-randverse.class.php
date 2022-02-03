@@ -45,7 +45,7 @@ class EHW_Rand_Verse_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'APPLES', 'rbv_domain' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( $p_name, 'rbv_domain' );
 		$channel = ! empty( $instance['channel'] ) ? $instance['channel'] : esc_html__( 'UCp93Jok5b2D4-LbIM4ZNNqA', 'rbv_domain' );
 		$layout = ! empty( $instance['layout'] ) ? $instance['layout'] : esc_html__( 'default', 'rbv_domain' );
 		$count = ! empty( $instance['count'] ) ? $instance['count'] : esc_html__( 'default', 'rbv_domain' );		
