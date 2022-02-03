@@ -32,7 +32,6 @@ class EHW_Rand_Verse_Widget extends WP_Widget {
 
         // Widget Content Output
 		include('ehw-randverse_tmpl__out.php');
-		echo $output;
 
 		echo $args['after_widget']; // Whatever you want to display AFTER widget (<div>, etc)
 	}

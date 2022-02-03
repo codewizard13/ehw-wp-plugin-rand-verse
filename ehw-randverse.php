@@ -17,9 +17,10 @@ if (!defined('ABSPATH')) {
 $abbr = 'rbv'; // abbreviation prefix
 $textdomain = 'ehw-randverse';
 $p_name = 'EHW Random Bible Verse';
+$plugin_dir = 'ehw-wp-plugin-rand-verse';
 
 // Load Scripts
-require_once(plugin_dir_path(__FILE__)."/includes/$textdomain-scripts.php");
+require_once(plugin_dir_path(__FILE__)."/includes/ehw-randverse-scripts.php");
 
 // Load Class
 require_once(plugin_dir_path(__FILE__)."/includes/$textdomain.class.php");
