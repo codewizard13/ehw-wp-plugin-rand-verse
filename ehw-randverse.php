@@ -16,6 +16,7 @@ if (!defined('ABSPATH')) {
 
 $abbr = 'rbv'; // abbreviation prefix
 $textdomain = 'ehw-randverse';
+$p_name = 'EHW Random Bible Verse';
 
 // Load Scripts
 require_once(plugin_dir_path(__FILE__)."/includes/$textdomain-scripts.php");
