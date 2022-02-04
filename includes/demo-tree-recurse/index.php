@@ -26,4 +26,4 @@ $tree = [
    'register.php'
 ];
 
-var_dump($tree);
+echo treeOut($tree);
