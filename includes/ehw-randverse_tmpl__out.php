@@ -1,11 +1,5 @@
 <?php /* ehw-randverse-scripts.php */
 
-// $input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
-// $rand_keys = array_rand($input, 2);
-// echo $input[$rand_keys[0]] . "\n";
-// echo $input[$rand_keys[1]] . "\n";
-// exit;
-
 $verse1 = 'For I know the thoughts that I think toward you,' . 
 'saith the LORD, thoughts of peace, and not of evil,' . 
 'to give you an expected end. -- Jeremiah 29:11';
@@ -20,9 +14,7 @@ $verse3 = 'And we know that all things work together for good to '.
 
 $verses = [$verse1, $verse2, $verse3];
 
-$rand_keys = array_rand($verses);
-
-$output = $verses[$rand_keys];
+$output = $verses[array_rand($verses)];
 
 ?>
 
