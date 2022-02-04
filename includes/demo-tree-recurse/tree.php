@@ -20,6 +20,12 @@ Future:
 * demo-tree-recurse/ dir and contents should be moved to own project
 */
 
+/**
+ * @args:
+ * - Array $tree: any array structure
+ * @returns:
+ * - String - HTML $markup
+ */
 function treeOut($tree) {
    $markup = '';
 
