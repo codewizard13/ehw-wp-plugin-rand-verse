@@ -30,15 +30,15 @@ $verses['Romans'][8][28] = $verse3;
 $verses['John'][1][1] = "In the beginning was the Word, and the Word was with God, and the Word was God.";
 $verses['John'][1][3] = "All things were made by him; and without him was not any thing made that was made.";
 
-var_dump($verses);
+// var_dump($verses);
 $john_ch_count = count(array_keys($verses['John']));
 $ttl_v_count = count($verses);
 echo '<p>Total Verses: ' . $ttl_v_count . '</p>';
-exit;
+// exit;
 
-$out = count( $verses['John'][array_keys($verses['John'])] );
-echo 'Total verses in John: ' .$out;
-exit;
+//$out = count( $verses['John'][array_keys($verses['John'])] );
+//echo 'Total verses in John: ' .$out;
+// exit;
 
 
 function get_rand_verse($verses) {
@@ -48,12 +48,14 @@ function get_rand_verse($verses) {
    $out = '';
 
    $book_names = array_keys($verses);
+   echo '<h3>Book Names Array:</h3>';
    var_dump($book_names);
 
    foreach ($verses as $verse) {
 
       foreach ($verse as $ch) {
          foreach ($ch as $verse_text) {
+            echo '<hr>';
             echo $verse_text . '<br>';
          }
       }
@@ -67,7 +69,7 @@ $output = get_rand_verse($verses);
 
 // $verses = [$verse1, $verse2, $verse3];
 // $rand_keys = array_rand($verses);
-
+exit;
 ?>
 
 <div class='ehw-rbv'>
