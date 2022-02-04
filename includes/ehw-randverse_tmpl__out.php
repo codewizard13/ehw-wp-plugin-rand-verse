@@ -11,9 +11,6 @@ $color = array_rand($var); //here yoy get random first of array(green or red or 
 echo $var[$color][array_rand($var[$color])];
 exit;
 
-
-
-
 $verse1 = 'For I know the thoughts that I think toward you,' . 
 'saith the LORD, thoughts of peace, and not of evil,' . 
 'to give you an expected end. -- Jeremiah 29:11';
@@ -30,6 +27,10 @@ $verses['Jeremiah'][29][11] = $verse1;
 $verses['John'][3][16] = $verse2;
 $verses['Romans'][8][28] = $verse3;
 
+function get_rand_verse() {
+
+   return $verse;
+}
 
 // $verses = [$verse1, $verse2, $verse3];
 $rand_keys = array_rand($verses);
