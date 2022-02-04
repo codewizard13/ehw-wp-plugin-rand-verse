@@ -42,11 +42,12 @@ function treeOut($tree, $lev=0) {
    foreach ($tree as $branch => $twig) {
 
       $markup .= '<li>';
-      
+      $cur_depth = $lev+1;
+
       if (is_array($twig)) {
-         $markup .= '<h2>'.$branch.'</h2>' . treeOut($twig);
+         $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . treeOut($twig, $cur_depth);
       } else {
-         $markup .= $twig;
+         $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . $twig;
       }
       
       $markup .= '</li>';
