@@ -41,7 +41,15 @@ function treeOut($tree, $lev=0) {
 
    foreach ($tree as $branch => $twig) {
 
-      $markup .= '<li>' . ((is_array($twig)) ? '<h2>'.$branch.'</h2>' . treeOut($twig) : $twig) . '</li>';
+      $markup .= '<li>';
+      
+      if (is_array($twig)) {
+         $markup .= '<h2>'.$branch.'</h2>' . treeOut($twig);
+      } else {
+         $markup .= $twig;
+      }
+      
+      $markup .= '</li>';
    
    }
 
