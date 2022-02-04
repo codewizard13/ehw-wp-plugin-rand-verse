@@ -2,3 +2,28 @@
 
 require('tree.php');
 
+$tree = [
+   'core'=> [
+      'init.php'
+   ],
+   'classes' => [
+      'User.php',
+      'Hash.php',
+      'Session.php'
+   ],
+   'functions' => [
+      'security.php'
+   ],
+   'template' => [
+      'index.template.php',
+      'includes' => [
+         'header.template.php',
+         'footer.template.php'
+      ]
+   ],
+   'index.php',
+   'login.php',
+   'register.php'
+];
+
+var_dump($tree);
