@@ -36,11 +36,13 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * @returns:
  * - String - HTML $markup
  */
-function treeOut($tree) {
+function treeOut($tree, $lev=0) {
    $markup = '';
 
    foreach ($tree as $branch => $twig) {
+
       $markup .= '<li>' . ((is_array($twig)) ? '<h2>'.$branch.'</h2>' . treeOut($twig) : $twig) . '</li>';
+   
    }
 
    return '<ul>' . $markup . '</ul>';
