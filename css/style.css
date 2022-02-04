@@ -1,6 +1,14 @@
 .ehw-rbv {
-  background-color: antiquewhite !important;
-  border: solid brown 2px;
-  margin: .3rem;
-  padding: .3rem;
+    background-color: antiquewhite !important;
+    border: solid brown 2px;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    line-height: 1.1rem;
+    font-size: .8rem;
+    font-style: italic;
+    color: brown;
+}
+
+.ehw-rbv .cite {
+    color: rgb(165 42 42 / 80%);
 }
