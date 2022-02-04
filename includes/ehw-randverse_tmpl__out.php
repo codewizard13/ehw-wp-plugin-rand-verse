@@ -30,6 +30,26 @@ $verses['Romans'][8][28] = $verse3;
 $verses['John'][1][1] = "In the beginning was the Word, and the Word was with God, and the Word was God.";
 $verses['John'][1][3] = "All things were made by him; and without him was not any thing made that was made.";
 
+/**
+ * @args:
+ * - Array $tree: any array structure
+ * @returns:
+ * - String - HTML $markup
+ */
+function treeOut($tree) {
+   $markup = '';
+
+   foreach ($tree as $branch => $twig) {
+      $markup .= '<li>' . ((is_array($twig)) ? $branch . treeOut($twig) : $twig) . '</li>';
+   }
+
+   return '<ul>' . $markup . '</ul>';
+}
+
+echo "I'll put the TREE OUT here<br>";
+echo treeOut($verses);
+exit;
+
 // var_dump($verses);
 $john_ch_count = count(array_keys($verses['John']));
 $ttl_v_count = count($verses);
@@ -39,7 +59,6 @@ echo '<p>Total Verses: ' . $ttl_v_count . '</p>';
 //$out = count( $verses['John'][array_keys($verses['John'])] );
 //echo 'Total verses in John: ' .$out;
 // exit;
-
 
 function get_rand_verse($verses) {
    // test verse
