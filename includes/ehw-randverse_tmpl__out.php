@@ -1,5 +1,18 @@
 <?php /* ehw-randverse-scripts.php */
 
+$var = array( 
+   "green" => array("one", "two"), 
+   "red" => array("three", "four"),
+   "yellow" => array("five", "six")
+   );
+   
+$color = array_rand($var); //here yoy get random first of array(green or red or yellow)
+// echo $var[$color][array_rand($var[$section])]; //here you get random element of this array
+echo $var[$color][array_rand($var[$color])];
+exit;
+
+
+
 
 $verse1 = 'For I know the thoughts that I think toward you,' . 
 'saith the LORD, thoughts of peace, and not of evil,' . 
