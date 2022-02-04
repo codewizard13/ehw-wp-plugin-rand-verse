@@ -27,10 +27,14 @@ $verses['Jeremiah'][29][11] = $verse1;
 $verses['John'][3][16] = $verse2;
 $verses['Romans'][8][28] = $verse3;
 
-function get_rand_verse() {
+function get_rand_verse($verses) {
+   $verse = $verses['John'][3][16];
 
    return $verse;
 }
+
+$output = get_rand_verse($verses);
+
 
 // $verses = [$verse1, $verse2, $verse3];
 $rand_keys = array_rand($verses);
