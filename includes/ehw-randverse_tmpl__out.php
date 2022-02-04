@@ -28,7 +28,22 @@ $verses['John'][3][16] = $verse2;
 $verses['Romans'][8][28] = $verse3;
 
 function get_rand_verse($verses) {
+   // test verse
    $verse = $verses['John'][3][16];
+
+   $out = '';
+
+   $book_names = array_keys($verses);
+   var_dump($book_names);
+
+   foreach ($verses as $verse) {
+
+      foreach ($verse as $ch) {
+         foreach ($ch as $verse_text) {
+            echo $verse_text . '<br>';
+         }
+      }
+   }
 
    return $verse;
 }
@@ -37,9 +52,7 @@ $output = get_rand_verse($verses);
 
 
 // $verses = [$verse1, $verse2, $verse3];
-$rand_keys = array_rand($verses);
-
-// $output = $verses[];
+// $rand_keys = array_rand($verses);
 
 ?>
 
