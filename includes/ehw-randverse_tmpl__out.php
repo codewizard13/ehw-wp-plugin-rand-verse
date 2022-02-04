@@ -40,7 +40,7 @@ function treeOut($tree) {
    $markup = '';
 
    foreach ($tree as $branch => $twig) {
-      $markup .= '<li>' . ((is_array($twig)) ? $branch . treeOut($twig) : $twig) . '</li>';
+      $markup .= '<li>' . ((is_array($twig)) ? '<h2>'.$branch.'</h2>' . treeOut($twig) : $twig) . '</li>';
    }
 
    return '<ul>' . $markup . '</ul>';
