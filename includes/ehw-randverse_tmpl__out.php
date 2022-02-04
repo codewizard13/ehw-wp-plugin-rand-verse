@@ -47,7 +47,9 @@ function treeOut($tree) {
 }
 
 echo "I'll put the TREE OUT here<br>";
+echo "<section class='ehw-rbv'>";
 echo treeOut($verses);
+echo "</section>";
 exit;
 
 // var_dump($verses);
