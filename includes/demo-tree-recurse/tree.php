@@ -63,7 +63,7 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * @returns:
  * - String - HTML $markup
  */
-function processTree($tree, $lev=0) {
+function processTree($tree, $lev=0, $options=[]) {
    $markup = '';
 
    foreach ($tree as $branch => $twig) {
@@ -72,7 +72,7 @@ function processTree($tree, $lev=0) {
       $cur_depth = $lev+1;
 
       if (is_array($twig)) {
-         $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . processTree($twig, $cur_depth);
+         $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . processTree($twig, $cur_depth, $options);
       } else {
          $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . $twig;
       }
