@@ -65,6 +65,7 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  */
 function processTree($tree, $lev=0, $options=[]) {
    $markup = '';
+   $out_arr = [];
 
    foreach ($tree as $branch => $twig) {
 
@@ -95,6 +96,7 @@ function processTree($tree, $lev=0, $options=[]) {
       
    
    } // /END foreach
+
 
    return '<ul>' . $markup . '</ul>';
 }
