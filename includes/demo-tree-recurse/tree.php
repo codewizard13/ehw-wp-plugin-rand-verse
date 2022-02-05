@@ -72,8 +72,11 @@ function processTree($tree, $lev=0, $options=[]) {
       $cur_depth = $lev+1;
 
       if (is_array($twig)) {
+         // if node
+
          $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . processTree($twig, $cur_depth, $options);
       } else {
+         // if leaf
          $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . $twig;
       }
       
