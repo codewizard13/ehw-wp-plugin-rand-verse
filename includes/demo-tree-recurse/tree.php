@@ -86,6 +86,7 @@ function processTree($tree, $lev=0, $options=[]) {
          $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . processTree($twig, $cur_depth, $options);
       } else {
          // if leaf
+         $options[$cur_depth] = $branch;
          $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . $twig;
       }
       
@@ -93,7 +94,7 @@ function processTree($tree, $lev=0, $options=[]) {
       $markup .= '</li>';
       
    
-   }
+   } // /END foreach
 
    return '<ul>' . $markup . '</ul>';
 }
