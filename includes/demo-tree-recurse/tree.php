@@ -36,6 +36,7 @@ function treeOut($tree) {
    return '<ul>' . $markup . '</ul>';
 }
 
+
 /* ------------ */
 
 $verse1 = 'For I know the thoughts that I think toward you,' . 
@@ -56,6 +57,8 @@ $verses['Romans'][8][28] = $verse3;
 
 $verses['John'][1][1] = "In the beginning was the Word, and the Word was with God, and the Word was God.";
 $verses['John'][1][3] = "All things were made by him; and without him was not any thing made that was made.";
+
+
 
 /**
  * @args:
@@ -97,8 +100,8 @@ function processTree($tree, $lev=0, $options=[]) {
    
    } // /END foreach
 
-
-   return '<ul>' . $markup . '</ul>';
+   $markup = '<ul>' . $markup . '</ul>';
+   return [];
 }
 
 echo "I'll put the TREE OUT here<br>";
