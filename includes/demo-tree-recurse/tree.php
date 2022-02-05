@@ -58,7 +58,7 @@ $verses['Romans'][8][28] = $verse3;
 $verses['John'][1][1] = "In the beginning was the Word, and the Word was with God, and the Word was God.";
 $verses['John'][1][3] = "All things were made by him; and without him was not any thing made that was made.";
 
-
+$options = [];
 
 /**
  * @args:
@@ -66,7 +66,7 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * @returns:
  * - String - HTML $markup
  */
-function processTree($tree, $lev=0, $options=[]) {
+function processTree($tree, $lev=0, &$options=[]) {
    $markup = '';
    $out_arr = [];
 
@@ -82,6 +82,16 @@ function processTree($tree, $lev=0, $options=[]) {
 
       $markup .= '<li>';
       $cur_depth = $lev+1;
+      $verse_count = 1;
+
+      if ($cur_depth == 1) {
+         $this_book = $branch;
+         $options['out_verses'][$verse_count] = $this_book;
+      } else if ($cur_depth == 2) {
+         $this_ch_num = $branch;
+      } else if ($cur_depth == 3) {
+         $this_vers_num = $branch;
+      }
 
       if (is_array($twig)) {
          // if node
@@ -97,15 +107,18 @@ function processTree($tree, $lev=0, $options=[]) {
       $markup .= var_dump($options);
       $markup .= '</li>';
       
+      $verse_count++;
    
    } // /END foreach
 
    $markup = '<ul>' . $markup . '</ul>';
-   return [];
+
 }
 
 echo "I'll put the TREE OUT here<br>";
 echo "<section class='ehw-rbv'>";
 echo processTree($verses);
 echo "</section>";
+echo "<h3>Printing OPTIONS</h3>";
+var_dump($options);
 exit;
