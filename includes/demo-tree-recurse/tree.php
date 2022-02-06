@@ -63,21 +63,10 @@ function listVerses($verses, $lev=0, $options=[]) {
       // If twig is verse text
       if (!is_array($twig)) {
          echo '<p><strong>Twig:</strong> ' . $twig . '</p>';
-      }
-      
+      }      
 
       $markup .= '<li>';
       $cur_depth = $lev+1;
-      $verse_count = 1;
-
-      if ($cur_depth == 1) {
-         $this_book = $branch;
-         $options['out_verses'][$verse_count] = $this_book;
-      } else if ($cur_depth == 2) {
-         $this_ch_num = $branch;
-      } else if ($cur_depth == 3) {
-         $this_vers_num = $branch;
-      }
 
       if (is_array($twig)) {
          // if node
@@ -92,9 +81,7 @@ function listVerses($verses, $lev=0, $options=[]) {
       
       $markup .= var_dump($options);
       $markup .= '</li>';
-      
-      $verse_count++;
-   
+         
    } // /END foreach
 
    $markup = '<ul>' . $markup . '</ul>';
