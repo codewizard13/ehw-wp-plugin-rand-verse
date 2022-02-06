@@ -92,7 +92,11 @@ function listVerses($verses, $lev=0, $options=[]) {
    $out_arr['markup'] = $markup;
    return $out_arr;
 }
+?>
 
+<link rel="stylesheet" href="../../css/style.css";
+
+<?php
 echo "I'll put the TREE OUT here<br>";
 echo "<section class='ehw-rbv'>";
 echo '<pre>' .var_dump(listVerses($verses)['markup']) .'</pre>';
