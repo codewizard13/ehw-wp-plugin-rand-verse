@@ -105,6 +105,4 @@ echo "I'll put the TREE OUT here<br>";
 echo "<section class='ehw-rbv'>";
 echo listVerses($verses);
 echo "</section>";
-echo "<h3>Printing OPTIONS</h3>";
-var_dump($options);
 exit;
