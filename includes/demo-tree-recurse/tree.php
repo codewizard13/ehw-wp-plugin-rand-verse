@@ -58,29 +58,6 @@ function listVerses($verses, $lev=0, $options=[]) {
 
    foreach ($verses as $branch => $twig) {
 
-      // Debug
-
-      // If twig is verse text
-      if (!is_array($twig)) {
-         echo '<p><strong>Twig:</strong> ' . $twig . '</p>';
-      }      
-
-      $markup .= '<li>';
-      $cur_depth = $lev+1;
-
-      if (is_array($twig)) {
-         // if node
-         echo '<p><strong>Branch:</strong> ' . $branch . '</p>';
-         $options[$cur_depth] = $branch;
-         $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . listVerses($twig, $cur_depth, $options);
-      } else {
-         // if leaf
-         $options[$cur_depth] = $branch;
-         $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . $twig;
-      }
-      
-      $markup .= var_dump($options);
-      $markup .= '</li>';
          
    } // /END foreach
 
