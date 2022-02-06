@@ -69,8 +69,9 @@ function listVerses($verses, $lev=0, $options=[]) {
             echo '<h3>$verse_num: ' . $verse_num . '</h3>';
             print_r($verse_val);
 
+            $markup_key = "$book_name";
             
-            $markup[] .= [];
+            $markup[$markup_key] = $markup_key;
 
          }
 
@@ -84,6 +85,6 @@ function listVerses($verses, $lev=0, $options=[]) {
 
 echo "I'll put the TREE OUT here<br>";
 echo "<section class='ehw-rbv'>";
-echo listVerses($verses)['markup'];
+echo '<pre>' .var_dump(listVerses($verses)['markup']) .'</pre>';
 echo "</section>";
 exit;
