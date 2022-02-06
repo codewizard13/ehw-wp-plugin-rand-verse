@@ -95,6 +95,7 @@ function listVerses($verses, $lev=0, $options=[]) {
    } // /END foreach
 
    $out_arr['markup'] = $markup;
+
    return $out_arr;
 }
 ?>
@@ -104,8 +105,16 @@ function listVerses($verses, $lev=0, $options=[]) {
 <?php
 
 $my_vs = listVerses($verses);
+$my_verse_ids = array_keys($my_vs['markup']);
 
-echo "I'll put the TREE OUT here<br>";
+echo "<H2>VERSES FORMATTED:</H2>";
+
+var_dump($my_verse_ids);
+
+
+
+
+
 echo "<section class='ehw-rbv'>";
 echo '<h3>' . '$my_vs' . '</h3>';
 var_dump($my_vs);
