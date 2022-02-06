@@ -76,7 +76,12 @@ function listVerses($verses, $lev=0, $options=[]) {
             // unique key for this verse
             $markup_key = $book_name.'-'.$ch_num_p.'-'.$v_num_p;
             
-            $markup[$markup_key] = $markup_key;
+            $markup[$markup_key] = [
+               'book_name' => $book_name,
+               'ch_num' => $ch_num_p,
+               'verse_num' => $v_num_p,
+               'verse_txt' => $verse_val
+            ];
 
          }
 
