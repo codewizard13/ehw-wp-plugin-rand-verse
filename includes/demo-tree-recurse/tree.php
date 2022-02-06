@@ -65,6 +65,11 @@ function listVerses($verses, $lev=0, $options=[]) {
          echo '<h3>$ch_num: ' . $ch_num . '</h3>';
          print_r($ch_val);
             
+         foreach ($ch_val as $verse_num => $verse_val) {
+            echo '<h3>$verse_num: ' . $verse_num . '</h3>';
+            print_r($verse_val);
+         }
+
       }
          
    } // /END foreach
