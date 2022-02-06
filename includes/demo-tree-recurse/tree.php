@@ -54,11 +54,11 @@ $options = [];
  * @returns:
  * - Array $out_arr: associative array of output data
  */
-function listVerses($tree, $lev=0, &$options=[]) {
+function listVerses($verses, $lev=0, &$options=[]) {
    $markup = '';
    $out_arr = [];
 
-   foreach ($tree as $branch => $twig) {
+   foreach ($verses as $branch => $twig) {
 
       // Debug
 
