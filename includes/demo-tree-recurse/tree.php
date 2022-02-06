@@ -53,7 +53,7 @@ $options = [];
  * @returns:
  * - String - HTML $markup
  */
-function processTree($tree, $lev=0, &$options=[]) {
+function listVerses($tree, $lev=0, &$options=[]) {
    $markup = '';
    $out_arr = [];
 
@@ -84,7 +84,7 @@ function processTree($tree, $lev=0, &$options=[]) {
          // if node
          echo '<p><strong>Branch:</strong> ' . $branch . '</p>';
          $options[$cur_depth] = $branch;
-         $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . processTree($twig, $cur_depth, $options);
+         $markup .= "<h$cur_depth>" .$branch. "</h$cur_depth>" . listVerses($twig, $cur_depth, $options);
       } else {
          // if leaf
          $options[$cur_depth] = $branch;
@@ -104,7 +104,7 @@ function processTree($tree, $lev=0, &$options=[]) {
 
 echo "I'll put the TREE OUT here<br>";
 echo "<section class='ehw-rbv'>";
-echo processTree($verses);
+echo listVerses($verses);
 echo "</section>";
 echo "<h3>Printing OPTIONS</h3>";
 var_dump($options);
