@@ -53,7 +53,7 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * - Array $out_arr: associative array of output data
  */
 function listVerses($verses, $lev=0, $options=[]) {
-   $markup = '';
+   $markup = [];
    $out_arr = [];
 
    foreach ($verses as $book_name => $book_val) {
@@ -69,7 +69,8 @@ function listVerses($verses, $lev=0, $options=[]) {
             echo '<h3>$verse_num: ' . $verse_num . '</h3>';
             print_r($verse_val);
 
-            $markup .= 'Hello';
+            
+            $markup[] .= [];
 
          }
 
