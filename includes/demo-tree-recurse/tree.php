@@ -49,9 +49,10 @@ $options = [];
 
 /**
  * @args:
- * - Array $tree: any array structure
+ * - Array $verses: an associative array of bible verses with depth of 3
+ * 
  * @returns:
- * - String - HTML $markup
+ * - Array $out_arr: associative array of output data
  */
 function listVerses($tree, $lev=0, &$options=[]) {
    $markup = '';
