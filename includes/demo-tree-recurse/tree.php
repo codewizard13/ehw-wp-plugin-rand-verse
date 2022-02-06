@@ -45,8 +45,6 @@ $verses['Romans'][8][28] = 'And we know that all things work together for good t
 $verses['John'][1][1] = "In the beginning was the Word, and the Word was with God, and the Word was God.";
 $verses['John'][1][3] = "All things were made by him; and without him was not any thing made that was made.";
 
-$options = [];
-
 /**
  * @args:
  * - Array $verses: an associative array of bible verses with depth of 3
@@ -54,7 +52,7 @@ $options = [];
  * @returns:
  * - Array $out_arr: associative array of output data
  */
-function listVerses($verses, $lev=0, &$options=[]) {
+function listVerses($verses, $lev=0, $options=[]) {
    $markup = '';
    $out_arr = [];
 
