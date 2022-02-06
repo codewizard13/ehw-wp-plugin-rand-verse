@@ -39,6 +39,7 @@ function treeOut($tree) {
 
 /* ------------ */
 
+// SAMPLE $verses array:
 $verses['Jeremiah'][29][11] = 'For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.';
 $verses['John'][3][16] = 'For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.';
 $verses['Romans'][8][28] = 'And we know that all things work together for good to them that love God, to them who are the called according to his purpose.';
@@ -57,17 +58,16 @@ function listVerses($verses, $lev=0, $options=[]) {
    $out_arr = [];
 
    foreach ($verses as $book_name => $book_val) {
-
-      echo '<h3>$book_name: ' . $book_name . '</h3>';
-      print_r($book_val);
+      // echo '<h3>$book_name: ' . $book_name . '</h3>';
+      // print_r($book_val);
 
       foreach ($book_val as $ch_num => $ch_val) {
-         echo '<h3>$ch_num: ' . $ch_num . '</h3>';
-         print_r($ch_val);
+         // echo '<h3>$ch_num: ' . $ch_num . '</h3>';
+         // print_r($ch_val);
             
          foreach ($ch_val as $verse_num => $verse_val) {
-            echo '<h3>$verse_num: ' . $verse_num . '</h3>';
-            print_r($verse_val);
+            // echo '<h3>$verse_num: ' . $verse_num . '</h3>';
+            // print_r($verse_val);
 
             // Pad chapter and verse numbers with leading zeros
             $ch_num_p = str_pad($ch_num, 2, 0, STR_PAD_LEFT);
