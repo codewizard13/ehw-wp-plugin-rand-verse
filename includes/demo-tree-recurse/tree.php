@@ -39,22 +39,9 @@ function treeOut($tree) {
 
 /* ------------ */
 
-$verse1 = 'For I know the thoughts that I think toward you,' . 
-'saith the LORD, thoughts of peace, and not of evil,' . 
-'to give you an expected end.';
-
-$verse2 = 'For God so loved the world, that he gave his only '. 
-'begotten Son, that whosoever believeth in him should not perish,'.
-'but have everlasting life.';
-
-$verse3 = 'And we know that all things work together for good to '.
-'them that love God, to them who are the called according to his'.
-'purpose.';
-
-$verses['Jeremiah'][29][11] = $verse1;
-$verses['John'][3][16] = $verse2;
-$verses['Romans'][8][28] = $verse3;
-
+$verses['Jeremiah'][29][11] = 'For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.';
+$verses['John'][3][16] = 'For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.';
+$verses['Romans'][8][28] = 'And we know that all things work together for good to them that love God, to them who are the called according to his purpose.';
 $verses['John'][1][1] = "In the beginning was the Word, and the Word was with God, and the Word was God.";
 $verses['John'][1][3] = "All things were made by him; and without him was not any thing made that was made.";
 
