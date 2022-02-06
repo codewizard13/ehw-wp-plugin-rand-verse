@@ -69,7 +69,12 @@ function listVerses($verses, $lev=0, $options=[]) {
             echo '<h3>$verse_num: ' . $verse_num . '</h3>';
             print_r($verse_val);
 
-            $markup_key = "$book_name";
+            // Pad chapter and verse numbers with leading zeros
+            $ch_num_p = str_pad($ch_num, 2, 0, STR_PAD_LEFT);
+            $v_num_p = str_pad($verse_num, 2, 0, STR_PAD_LEFT);
+
+            // unique key for this verse
+            $markup_key = $book_name.'-'.$ch_num_p.'-'.$v_num_p;
             
             $markup[$markup_key] = $markup_key;
 
