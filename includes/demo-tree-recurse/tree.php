@@ -75,12 +75,17 @@ function listVerses($verses, $lev=0, $options=[]) {
 
             // unique key for this verse
             $markup_key = $book_name.'-'.$ch_num_p.'-'.$v_num_p;
+
+            // output html version one
+            $html_out = "<h3>$book_name $ch_num_p:$v_num_p</h3>";
+            $html_out .= '';
             
             $markup[$markup_key] = [
                'book_name' => $book_name,
                'ch_num' => $ch_num_p,
                'verse_num' => $v_num_p,
-               'verse_txt' => $verse_val
+               'verse_txt' => $verse_val,
+               'html_01' => $html_out
             ];
 
          }
@@ -94,11 +99,15 @@ function listVerses($verses, $lev=0, $options=[]) {
 }
 ?>
 
-<link rel="stylesheet" href="../../css/style.css";
+<link rel="stylesheet" href="../../css/style.css">
 
 <?php
+
+$my_vs = listVerses($verses);
+
 echo "I'll put the TREE OUT here<br>";
 echo "<section class='ehw-rbv'>";
-echo '<pre>' .var_dump(listVerses($verses)['markup']) .'</pre>';
+echo '<h3>' . '$my_vs' . '</h3>';
+var_dump($my_vs);
 echo "</section>";
 exit;
