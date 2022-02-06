@@ -69,8 +69,7 @@ function listVerses($verses, $lev=0, $options=[]) {
          
    } // /END foreach
 
-   $markup = '<ul>' . $markup . '</ul>';
-
+   return $out_arr;
 }
 
 echo "I'll put the TREE OUT here<br>";
