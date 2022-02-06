@@ -68,17 +68,21 @@ function listVerses($verses, $lev=0, $options=[]) {
          foreach ($ch_val as $verse_num => $verse_val) {
             echo '<h3>$verse_num: ' . $verse_num . '</h3>';
             print_r($verse_val);
+
+            $markup .= 'Hello';
+
          }
 
       }
          
    } // /END foreach
 
+   $out_arr['markup'] = $markup;
    return $out_arr;
 }
 
 echo "I'll put the TREE OUT here<br>";
 echo "<section class='ehw-rbv'>";
-echo listVerses($verses);
+echo listVerses($verses)['markup'];
 echo "</section>";
 exit;
