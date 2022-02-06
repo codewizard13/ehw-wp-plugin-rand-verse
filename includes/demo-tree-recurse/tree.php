@@ -77,8 +77,10 @@ function listVerses($verses, $lev=0, $options=[]) {
             $markup_key = $book_name.'-'.$ch_num_p.'-'.$v_num_p;
 
             // output html version one
-            $html_out = "<h3>$book_name $ch_num_p:$v_num_p</h3>";
-            $html_out .= '';
+            $html_out .= "<section class='ehw-rbv'>";
+            $html_out .= "<h3>$book_name $ch_num_p:$v_num_p</h3>";
+            $html_out .= "<p>$verse_val</p>";
+            $html_out .= "</section>";
             
             $markup[$markup_key] = [
                'book_name' => $book_name,
@@ -111,12 +113,11 @@ echo "<H2>VERSES FORMATTED:</H2>";
 
 var_dump($my_verse_ids);
 
+foreach ($my_vs['markup'] as $verse => $key) {
+   echo $key['html_01']. "<br>";
+}
 
 
 
 
-echo "<section class='ehw-rbv'>";
-echo '<h3>' . '$my_vs' . '</h3>';
-var_dump($my_vs);
-echo "</section>";
 exit;
