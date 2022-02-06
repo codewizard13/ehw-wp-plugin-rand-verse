@@ -56,8 +56,16 @@ function listVerses($verses, $lev=0, $options=[]) {
    $markup = '';
    $out_arr = [];
 
-   foreach ($verses as $branch => $twig) {
+   foreach ($verses as $book_name => $book_val) {
 
+      echo '<h3>$book_name: ' . $book_name . '</h3>';
+      print_r($book_val);
+
+      foreach ($book_val as $ch_num => $ch_val) {
+         echo '<h3>$ch_num: ' . $ch_num . '</h3>';
+         print_r($ch_val);
+            
+      }
          
    } // /END foreach
 
