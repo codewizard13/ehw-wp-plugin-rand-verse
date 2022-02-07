@@ -59,6 +59,15 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * @usage:
  * Samples of how to access various properties:
  * 
+ * // Returns array of formattedVerse objects under 'markup' property
+ * //  NOTE: This property will be refeactored out later! 
+ * $my_vs = buildFormattedVerses($verses);
+ * 
+ * // Get all book-ch-verse array keys
+ * $my_verse_ids = array_keys($my_vs['markup']);
+ * 
+ * // Get verse text for John 3:16
+ * $my_vs['markup']['John-03-16']['verse_text']
  * 
  * @args:
  * - Array $verses: an associative array of bible verses with depth of 3
@@ -67,7 +76,7 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * - CSS styles loaded via wp_enqueue_styles() hook for .ehw-rbv
  * 
  * @returns:
- * - Array $out_arr: associative array of output data
+ * - Array $out_arr: array of object-like arrays
  */
 function buildFormattedVerses($verses, $lev=0, $options=[]) {
    $markup = [];
