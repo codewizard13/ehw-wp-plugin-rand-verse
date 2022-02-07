@@ -107,7 +107,7 @@ function displayFormattedVerses($va) {
       echo $key['html_01']. "<br>";
    }
 }
-displayFormattedVerses($my_vs);
+// displayFormattedVerses($my_vs);
 
 /**
  * 
