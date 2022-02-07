@@ -78,11 +78,6 @@ function buildFormattedVerses($verses) {
 
    return $out_arr;
 }
-?>
-
-<link rel="stylesheet" href="../../css/style.css">
-
-<?php
 
 $my_vs = buildFormattedVerses($verses);
 $my_verse_ids = array_keys($my_vs);
