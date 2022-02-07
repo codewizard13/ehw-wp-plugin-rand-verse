@@ -87,10 +87,6 @@ function buildFormattedVerses($verses) {
 $my_vs = buildFormattedVerses($verses);
 $my_verse_ids = array_keys($my_vs);
 
-echo "<H2>VERSES FORMATTED:</H2>";
-
-var_dump($my_verse_ids);
-
 /**
  * @purpose:
  * Loops through a verses array and prints all results to screen
