@@ -77,7 +77,7 @@ function listVerses($verses, $lev=0, $options=[]) {
             $markup_key = $book_name.'-'.$ch_num_p.'-'.$v_num_p;
 
             // output html version one
-            $html_out .= "<section class='ehw-rbv'>";
+            $html_out = "<section class='ehw-rbv'>";
             $html_out .= "<h3>$book_name $ch_num_p:$v_num_p</h3>";
             $html_out .= "<p>$verse_val</p>";
             $html_out .= "</section>";
