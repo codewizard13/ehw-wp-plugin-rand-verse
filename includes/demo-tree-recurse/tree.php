@@ -39,7 +39,7 @@ function treeOut($tree) {
 
 /* ------------ */
 
-// SAMPLE $verses array:
+// SAMPLE $verses array (King James Version, KJV):
 $verses['Jeremiah'][29][11] = 'For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.';
 $verses['John'][3][16] = 'For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.';
 $verses['Romans'][8][28] = 'And we know that all things work together for good to them that love God, to them who are the called according to his purpose.';
