@@ -57,17 +57,15 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * the formatted verse text that gets displayed.
  * 
  * @usage:
- * Samples of how to access various properties:
  * 
- * // Returns array of formattedVerse objects under 'markup' property
- * //  NOTE: This property will be refeactored out later! 
+ * // Returns array of formattedVerse array objects
  * $my_vs = buildFormattedVerses($verses);
  * 
  * // Get all book-ch-verse array keys
- * $my_verse_ids = array_keys($my_vs['markup']);
+ * $my_verse_ids = array_keys($my_vs);
  * 
  * // Get verse text for John 3:16
- * $my_vs['markup']['John-03-16']['verse_text']
+ * $my_vs['John-03-16']['verse_text']
  * 
  * @args:
  * - Array $verses: an associative array of bible verses with depth of 3
@@ -115,7 +113,7 @@ function buildFormattedVerses($verses) {
          
    } // /END foreach
 
-   $out_arr['markup'] = $markup;
+   $out_arr = $markup;
 
    return $out_arr;
 }
@@ -126,7 +124,7 @@ function buildFormattedVerses($verses) {
 <?php
 
 $my_vs = buildFormattedVerses($verses);
-$my_verse_ids = array_keys($my_vs['markup']);
+$my_verse_ids = array_keys($my_vs);
 
 echo "<H2>VERSES FORMATTED:</H2>";
 
@@ -140,7 +138,7 @@ function displayFormattedVerses($va) {
 
 }
 
-foreach ($my_vs['markup'] as $verse => $key) {
+foreach ($my_vs as $verse => $key) {
    echo $key['html_01']. "<br>";
 }
 
