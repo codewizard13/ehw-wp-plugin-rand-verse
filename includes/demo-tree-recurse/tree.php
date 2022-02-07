@@ -142,6 +142,15 @@ function displayFormattedVerses($va) {
 displayFormattedVerses($my_vs);
 
 /**
+ * 
+ * @usage:
+ * 
+ * // display formatted verse html segment
+ * echo $output['html_01'];
+ * 
+ * @requires:
+ * - CSS styles loaded via wp_enqueue_styles() hook for .ehw-rbv
+ * 
  * @args:
  * - Array $va: array of verses built with buildFormattedVerses()
  * 
@@ -149,28 +158,14 @@ displayFormattedVerses($my_vs);
  * - Array obj $verse: 
  */
 function getRandVerse($va) {
-   // test verse
-   $verse = $va['John'][3][16];
 
-   $out = '';
+   $rand_keys = array_rand($va);
 
-   $book_names = array_keys($va);
-   echo '<h3>Book Names Array:</h3>';
-   var_dump($book_names);
+   $out_verse = $va[$rand_keys];
 
-   foreach ($va as $verse) {
-
-      foreach ($verse as $ch) {
-         foreach ($ch as $verse_text) {
-            echo '<hr>';
-            echo $verse_text . '<br>';
-         }
-      }
-   }
-
-   return $verse;
+   return $out_verse;
 }
 
-$output = getRandVerse($verses);
-
+$output = getRandVerse($my_vs);
+echo($output['html_01']);
 exit;
