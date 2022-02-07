@@ -140,6 +140,5 @@ echo($output['html_01']);
 
 ?>
 
-<div class='ehw-rbv'>
-  <?php echo $output; ?>
-</div>
+<?php echo $output['html_01']; ?>
+
