@@ -136,11 +136,8 @@ function getRandVerse($va) {
 
 $output = getRandVerse($my_vs);
 echo($output['html_01']);
-exit;
 
-// $verses = [$verse1, $verse2, $verse3];
-// $rand_keys = array_rand($verses);
-exit;
+
 ?>
 
 <div class='ehw-rbv'>
