@@ -83,16 +83,10 @@ function buildFormattedVerses($verses, $lev=0, $options=[]) {
    $out_arr = [];
 
    foreach ($verses as $book_name => $book_val) {
-      // echo '<h3>$book_name: ' . $book_name . '</h3>';
-      // print_r($book_val);
 
       foreach ($book_val as $ch_num => $ch_val) {
-         // echo '<h3>$ch_num: ' . $ch_num . '</h3>';
-         // print_r($ch_val);
             
          foreach ($ch_val as $verse_num => $verse_val) {
-            // echo '<h3>$verse_num: ' . $verse_num . '</h3>';
-            // print_r($verse_val);
 
             // Pad chapter and verse numbers with leading zeros
             $ch_num_p = str_pad($ch_num, 2, 0, STR_PAD_LEFT);
