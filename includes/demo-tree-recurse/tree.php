@@ -141,18 +141,21 @@ function displayFormattedVerses($va) {
 }
 displayFormattedVerses($my_vs);
 
-
-function get_rand_verse($verses) {
+/**
+ * @args:
+ * - Array $va: array of verses built with buildFormattedVerses()
+ */
+function getRandVerse($va) {
    // test verse
-   $verse = $verses['John'][3][16];
+   $verse = $va['John'][3][16];
 
    $out = '';
 
-   $book_names = array_keys($verses);
+   $book_names = array_keys($va);
    echo '<h3>Book Names Array:</h3>';
    var_dump($book_names);
 
-   foreach ($verses as $verse) {
+   foreach ($va as $verse) {
 
       foreach ($verse as $ch) {
          foreach ($ch as $verse_text) {
@@ -165,6 +168,6 @@ function get_rand_verse($verses) {
    return $verse;
 }
 
-$output = get_rand_verse($verses);
+$output = getRandVerse($verses);
 
 exit;
