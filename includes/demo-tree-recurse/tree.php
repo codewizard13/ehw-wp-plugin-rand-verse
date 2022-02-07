@@ -135,14 +135,10 @@ var_dump($my_verse_ids);
  * - Array $va: array of verses built with buildFormattedVerses()
  */
 function displayFormattedVerses($va) {
-
+   foreach ($va as $verse => $key) {
+      echo $key['html_01']. "<br>";
+   }
 }
-
-foreach ($my_vs as $verse => $key) {
-   echo $key['html_01']. "<br>";
-}
-
-
-
+displayFormattedVerses($my_vs);
 
 exit;
