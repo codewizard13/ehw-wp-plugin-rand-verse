@@ -47,8 +47,24 @@ $verses['John'][1][1] = "In the beginning was the Word, and the Word was with Go
 $verses['John'][1][3] = "All things were made by him; and without him was not any thing made that was made.";
 
 /**
+ * @purpose:
+ * Reads through multidimensional array of bible verses (book name, chapter
+ * number, verse number), with the applicable verse text being the assisgnment
+ * value, and builds a new array of arrays. The new array elements look like
+ * objects, having as their key a string built of "book-ch-num" concatenated.
+ * The properties of each first-level array consist of book_name, ch_num,
+ * verse_num, and verse_txt. An additional property of 'html_01' builds
+ * the formatted verse text that gets displayed.
+ * 
+ * @usage:
+ * Samples of how to access various properties:
+ * 
+ * 
  * @args:
  * - Array $verses: an associative array of bible verses with depth of 3
+ * 
+ * @requires:
+ * - CSS styles loaded via wp_enqueue_styles() hook for .ehw-rbv
  * 
  * @returns:
  * - Array $out_arr: associative array of output data
