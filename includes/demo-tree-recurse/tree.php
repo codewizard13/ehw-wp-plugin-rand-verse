@@ -5,7 +5,7 @@ Main Prj File:  ehw-randverse.php
 
 This Filename:  tree.php
 Date Created:   02/04/22
-Date Updated:   02/05/22
+Date Updated:   02/07/22
 Programmer:     Eric L. Hepperle
 
 File Version:    1.00.00
@@ -78,7 +78,7 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * @returns:
  * - Array $out_arr: array of object-like arrays
  */
-function buildFormattedVerses($verses, $lev=0, $options=[]) {
+function buildFormattedVerses($verses) {
    $markup = [];
    $out_arr = [];
 
@@ -131,6 +131,14 @@ $my_verse_ids = array_keys($my_vs['markup']);
 echo "<H2>VERSES FORMATTED:</H2>";
 
 var_dump($my_verse_ids);
+
+/**
+ * @args:
+ * - Array $va: array of verses built with buildFormattedVerses()
+ */
+function displayFormattedVerses($va) {
+
+}
 
 foreach ($my_vs['markup'] as $verse => $key) {
    echo $key['html_01']. "<br>";
