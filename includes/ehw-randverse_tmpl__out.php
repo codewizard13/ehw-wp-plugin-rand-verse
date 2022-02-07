@@ -131,8 +131,6 @@ function getRandVerse($va) {
 }
 
 $output = getRandVerse($my_vs);
-echo($output['html_01']);
-
 
 ?>
 
