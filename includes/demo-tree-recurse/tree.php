@@ -144,6 +144,9 @@ displayFormattedVerses($my_vs);
 /**
  * @args:
  * - Array $va: array of verses built with buildFormattedVerses()
+ * 
+ * @returns:
+ * - Array obj $verse: 
  */
 function getRandVerse($va) {
    // test verse
