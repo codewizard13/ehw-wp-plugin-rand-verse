@@ -141,4 +141,30 @@ function displayFormattedVerses($va) {
 }
 displayFormattedVerses($my_vs);
 
+
+function get_rand_verse($verses) {
+   // test verse
+   $verse = $verses['John'][3][16];
+
+   $out = '';
+
+   $book_names = array_keys($verses);
+   echo '<h3>Book Names Array:</h3>';
+   var_dump($book_names);
+
+   foreach ($verses as $verse) {
+
+      foreach ($verse as $ch) {
+         foreach ($ch as $verse_text) {
+            echo '<hr>';
+            echo $verse_text . '<br>';
+         }
+      }
+   }
+
+   return $verse;
+}
+
+$output = get_rand_verse($verses);
+
 exit;
