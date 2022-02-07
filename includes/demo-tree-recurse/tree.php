@@ -53,7 +53,7 @@ $verses['John'][1][3] = "All things were made by him; and without him was not an
  * @returns:
  * - Array $out_arr: associative array of output data
  */
-function formatVerses($verses, $lev=0, $options=[]) {
+function buildFormattedVerses($verses, $lev=0, $options=[]) {
    $markup = [];
    $out_arr = [];
 
@@ -106,7 +106,7 @@ function formatVerses($verses, $lev=0, $options=[]) {
 
 <?php
 
-$my_vs = formatVerses($verses);
+$my_vs = buildFormattedVerses($verses);
 $my_verse_ids = array_keys($my_vs['markup']);
 
 echo "<H2>VERSES FORMATTED:</H2>";
