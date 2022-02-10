@@ -129,5 +129,5 @@ $output = getRandVerse($my_vs);
 
 ?>
 
-<?php echo esc_html($output['html_01']); ?>
+<?php echo $output['html_01']; ?>
 
