@@ -95,7 +95,7 @@ $my_verse_ids = array_keys($my_vs);
  */
 function displayFormattedVerses($va) {
    foreach ($va as $verse => $key) {
-      echo $key['html_01']. "<br>";
+      echo esc_html($key['html_01']. "<br>");
    }
 }
 // displayFormattedVerses($my_vs);
@@ -129,5 +129,5 @@ $output = getRandVerse($my_vs);
 
 ?>
 
-<?php echo $output['html_01']; ?>
+<?php echo esc_html($output['html_01']); ?>
 
