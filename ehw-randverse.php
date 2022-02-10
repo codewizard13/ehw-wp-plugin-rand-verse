@@ -3,7 +3,7 @@
 Plugin Name: EHW Random Bible Verse
 Plugin URI: https://erichepperle.com/software/wp
 Description: Display random Bible verse
-Version: 1.0.0
+Version: 0.1.0
 Author: Eric Hepperle
 Author URI: https://erichepperle.com
 Date Created: 02/03/22
