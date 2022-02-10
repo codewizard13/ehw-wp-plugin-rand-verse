@@ -83,24 +83,6 @@ $my_vs = buildFormattedVerses($verses);
 $my_verse_ids = array_keys($my_vs);
 
 /**
- * @purpose:
- * Loops through a verses array and prints all results to screen
- * in HTML format. Styling is outside scope of this function.
- * 
- * @args:
- * - Array $va: array of verses built with buildFormattedVerses()
- * 
- * @returns:
- * - VOID
- */
-function displayFormattedVerses($va) {
-   foreach ($va as $verse => $key) {
-      echo esc_html($key['html_01']. "<br>");
-   }
-}
-// displayFormattedVerses($my_vs);
-
-/**
  * 
  * @usage:
  * 
