@@ -41,7 +41,7 @@ While support for other versions and language localization could be added as thi
 
 == Changelog ==
 
-= 1.1.0 - February 11, 2022 =
+= 0.1.1 - February 11, 2022 =
 * Second round of fixes for WordPress Plugin team
 * Wrapped html $output echo in ehw-randverse_tmpl__out.php with wp_kses_post()
 
