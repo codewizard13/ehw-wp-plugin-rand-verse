@@ -111,5 +111,5 @@ $output = getRandVerse($my_vs);
 
 ?>
 
-<?php echo $output['html_01']; ?>
+<?php echo wp_kses_post($output['html_01']); ?>
 
