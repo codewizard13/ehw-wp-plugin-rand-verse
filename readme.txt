@@ -4,7 +4,7 @@ Donate link: https://paypal.me/erichepperledesigns
 Tags: 
 Requires at least: 5.9
 Tested up to: 5.9
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 Requires PHP: 7.4.26
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -41,5 +41,16 @@ While support for other versions and language localization could be added as thi
 
 == Changelog ==
 
-= 1.00 - February 07 2022 =
+= 1.1.0 - February 11, 2022 =
+* Second round of fixes for WordPress Plugin team
+* Wrapped html $output echo in ehw-randverse_tmpl__out.php with wp_kses_post()
+
+= 0.1.0 - February 10, 2022 =
+* Fixed issues identified by WordPress Plugin team
+* Changed "Stable Tag" in readme.txt and ehw-randverse.php to 0.1.0 to follow semantic versioning
+* Removed unused function displayFormattedVerses()
+* Updated the plugins_url() calls in ehw-randverse-scripts.php to use the modern version with __FILE__ variable as the 2nd param
+
+= 1.00 - February 07, 2022 =
 * Initial Release.
+* Submitted to WordPress Plugin team for approval
