@@ -17,6 +17,14 @@ $verses['Romans'][8][28] = "And we know that all things work together for good t
 $verses['John'][1][1] = "In the beginning was the Word, and the Word was with God, and the Word was God.";
 $verses['John'][1][3] = "All things were made by him; and without him was not any thing made that was made.";
 
+/* Additonal verses that are different in PCE, as per http://www.bibleprotector.com/forum/viewtopic.php?f=8&t=85: */
+$verses['Isaiah'][49][13] = "Sing, O heavens; and be joyful, O earth; and break forth into singing, O mountains: for the LORD hath comforted his people, and will have mercy upon his afflicted.";
+$verses['1 Corinthians'][12][28] = "And God hath set some in the church, first apostles, secondarily prophets, thirdly teachers, after that miracles, then gifts of healings, helps, governments, diversities of tongues.";
+$verses['Ruth'][3][15] = "Also he said, Bring the vail that thou hast upon thee, and hold it. And when she held it, he measured six measures of barley, and laid it on her: and she went into the city.";
+$verses['Matthew'][12][23] = "And all the people were amazed, and said, Is not this the son of David?";
+$verses['Ezekiel'][24][7] = "For her blood is in the midst of her; she set it upon the top of a rock; she poured it not upon the ground, to cover it with dust;
+   ";
+
 /**
  * @purpose:
  * Reads through multidimensional array of bible verses (book name, chapter
