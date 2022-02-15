@@ -9,7 +9,7 @@ Requires PHP: 7.4.26
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Displays random Bible verse (KJV) on page-load and refresh with widget.
+Displays random Bible verse on page-load and refresh with widget.
 
 == Description ==
 
@@ -23,7 +23,7 @@ All verses are King James Version and currently English is the only supported la
 
 = English =
 
-* King James Version (KJV)
+* King James Bible: Pure Cambridge Edition (PCE) via https://openbible.com/ (public domain)
 
 == Miscellaneous Info ==
 
