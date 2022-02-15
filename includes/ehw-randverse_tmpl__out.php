@@ -1,6 +1,16 @@
 <?php /* ehw-randverse_tmpl__out.php */
 
-// SAMPLE $verses array (King James Version, KJV):
+/* DEFINE VERSES ARRAY:
+   NOTE: All Bible verses taken from King James Bible: Pure Cambridge Edition (PCE) via https://openbible.com/
+   - Retrieved 02/15/22
+   - License: As per bibleprotector.com, the PCE Edition of the King James Bible is public domain, and thus free to use:
+   
+   "The standard King James Bible was originally presented by Cambridge University Press,
+   and the Pure Cambridge Edition that was historically published by Cambridge University
+   is in the public domain, though it gained its authority to publish it from Crown of
+   Great Britain. The Pure Cambridge Edition can and should be published and produced
+   by anyone without restriction, except absolute accuracy." -- https://www.bibleprotector.com/GUIDE_TO_PCE.pdf
+*/
 $verses['Jeremiah'][29][11] = 'For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.';
 $verses['John'][3][16] = 'For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.';
 $verses['Romans'][8][28] = 'And we know that all things work together for good to them that love God, to them who are the called according to his purpose.';
