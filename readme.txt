@@ -44,6 +44,7 @@ While support for other versions and language localization could be added as thi
 = 0.1.2 - February 15, 2022 =
 * Third round of fixes for WordPress Plugin team
 * Change verses to use public domain Pure Cambridge Edition KJV bible from openbible.com
+* Add five verses
 
 = 0.1.1 - February 11, 2022 =
 * Second round of fixes for WordPress Plugin team
